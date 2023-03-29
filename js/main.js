@@ -1,8 +1,15 @@
 const projectElement = document.querySelector(".projectContainer")
-const section = document.querySelectorAll(".hidden")
-const home = document.querySelector(".welcome")
+const mobileMenu = document.querySelector(".mobileMenu")
 const headerColor = document.querySelector("header")
+const section = document.querySelectorAll(".hidden")
+const menu = document.querySelector(".menuList")
+const home = document.querySelector(".welcome")
 
+
+function clickMenuMobile() {
+    menu.classList.toggle("openMenuMobile")
+    mobileMenu.children[1].classList.toggle("showExit")
+}
 function homeAction(entry) {
     if (entry[0].isIntersecting) {
         headerColor.classList.remove("navBlack")
@@ -10,7 +17,6 @@ function homeAction(entry) {
         headerColor.classList.add("navBlack")
     }
 }
-
 function sectionAction(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -74,3 +80,5 @@ const projectCard = listProject.map(project => {
 }).join("")
 
 projectElement.innerHTML = projectCard
+mobileMenu.children[0].addEventListener("click", clickMenuMobile)
+mobileMenu.children[1].addEventListener("click", clickMenuMobile)

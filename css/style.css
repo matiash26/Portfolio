@@ -30,10 +30,13 @@ header {
     position: fixed;
     z-index: 1;
 }
+
 .navBlack {
     background-color: var(--bg-main);
 }
-.navBlack > nav > h3,.navBlack > nav > ul > li > a {
+
+.navBlack>nav>h3,
+.navBlack>nav>ul>li>a {
     color: var(--tan);
 }
 nav {
@@ -50,7 +53,53 @@ nav>h3 {
     font-weight: 900;
     color: var(--deepBlue);
 }
-
+.openMenuMobile {
+    display: flex !important;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-main);
+    transition: .2s;
+}
+.openMenuMobile > li{
+    width: 100%;
+    text-align: center;
+}
+.openMenuMobile > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--tan) !important;
+    font-size: 2rem;
+}
+.mobileMenu {
+    display: none;
+    color: var(--tan)
+}
+.exit {
+    display: none;
+    font-size: 1.8rem;
+    position: fixed;
+    z-index: 3;
+}
+.showExit{
+    display: block;
+}
+.mobileMenu > div > span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: .2rem;
+    background-color: var(--bg-main);
+    border-radius: .3rem;
+}
+.menuList{
+    transition: .5s;
+}
 .menuList>li {
     display: inline;
 }
@@ -72,10 +121,10 @@ nav>h3 {
 .menuList>li>a:active {
     color: var(--tan);
 }
-
 main {
     height: 100vh;
 }
+
 .welcome {
     max-width: 1450px;
     width: 100%;
@@ -94,7 +143,7 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
-    
+
 }
 
 .homeItem {
@@ -158,6 +207,7 @@ main {
     padding-top: 5rem;
     margin: auto;
 }
+
 .descAbout {
     color: var(--white);
 }
@@ -406,67 +456,95 @@ main {
     transition: 1s;
     top: 0;
 }
+
 .leftToRight {
     left: -50px;
 }
+
 @media (max-width: 1112px) {
-    .homeContainer{
+    .homeContainer {
         justify-content: center;
         height: 440px;
     }
-    .right{
+
+    .right {
         display: none;
     }
-    .descAbout>p{
+
+    .descAbout>p {
         width: auto;
         padding: 0 2rem;
     }
-    .timeLapseContainer>h1{
+
+    .timeLapseContainer>h1 {
         width: 51%;
     }
-    .project{
+
+    .project {
         margin-bottom: 2rem;
     }
-    .title{
+
+    .title {
         width: 20%;
     }
-    .year, .technology {
+
+    .year,
+    .technology {
         border: none;
     }
-    .technology{
+
+    .technology {
         padding: 0;
         height: 50px;
     }
 }
+
 @media (max-width: 650px) {
-    .timeLapseContent{
+    .timeLapseContent {
         width: 90%;
     }
-    .title{
+
+    .title {
         width: 40%;
     }
 }
-@media (max-width:564px){
-    nav > h3{
+
+@media (max-width:564px) {
+    nav>h3 {
         display: none;
     }
-    .menuList{
+
+    .menuList {
         margin-left: auto;
     }
-    .homeItem > .desc > h2{
+
+    .homeItem>.desc>h2 {
         font-size: 3.5rem;
     }
+
+    .menuList {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: block;
+        margin-left: auto;
+    }
+
 }
-@media (max-width: 501px){
-    .homeItem > .desc > h2{
+
+@media (max-width: 501px) {
+    .homeItem>.desc>h2 {
         font-size: 2.5rem;
     }
 }
-@media(max-width: 478px){
-    .socialMedia{
+
+@media(max-width: 478px) {
+    .socialMedia {
         padding: 0 1rem;
     }
-    .socialMedia > a{
+
+    .socialMedia>a {
         font-size: .8rem;
         display: flex;
         flex-direction: column;
