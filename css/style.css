@@ -2,9 +2,8 @@
     --tan: #bfa97d;
     --white: #fff;
     --lightWhite: #ffffff63;
-    ;
     --deepBlue: #1a242f;
-    ;
+    --lightBlue: #212f3d;
     --bg-main: #0e141b;
 
 }
@@ -364,7 +363,7 @@ main {
 }
 
 .tagsProject>span {
-    background-color: var(--deepBlue);
+    background-color: var(--lightBlue);
     font-size: .7rem;
     padding: .4rem;
     color: var(--tan);
