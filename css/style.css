@@ -309,6 +309,7 @@ main {
     justify-content: space-evenly;
     gap: 2rem;
     padding: 0 2rem;
+    margin-bottom: 3rem;
 }
 
 .ProjectContent {
