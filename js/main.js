@@ -38,7 +38,7 @@ const listProject = [
     {
         title: "Desafio-interface-Dio",
         image: "./assets/image/interface.jpg",
-        desc: "Desafio da web.dio - para recriação da plataforma, fiz no formato Reactjs e na página atualizada em React JS.",
+        desc: "Desafio da web.dio - para recriação da plataforma, fiz no formato Reactjs e na página atualizada.",
         tag: ["React JS"],
         repostory: "https://github.com/matiash26/Desafio-interface-Dio/",
         site: "https://desafio-interface-ew54f6pln-matiash26.vercel.app/"
