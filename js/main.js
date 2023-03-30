@@ -15,6 +15,7 @@ function homeAction(entry) {
         headerColor.classList.remove("navBlack")
     } else {
         headerColor.classList.add("navBlack")
+        
     }
 }
 function sectionAction(entries) {
