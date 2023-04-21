@@ -34,7 +34,7 @@ const listProject = [
         desc: "Projeto real para gerenciar as entradas e saidas dos produtos e ter melhoria nas vendas baseada no gráfico.",
         tag: ["React JS", "Node JS express", "MySQL"],
         repostory: "https://github.com/matiash26/Projeto-de-estoque-para-gerenciar-entradas-e-saidas",
-        site: "https://localhost/"
+        site: ""
     },
     {
         title: "Desafio-interface-Dio",
@@ -51,7 +51,8 @@ const listProject = [
         tag: ["React JS"],
         repostory: "https://github.com/matiash26/Desafio-WikiHub",
         site: "https://desafio-wiki-gdoz8d47f-matiash26.vercel.app/"
-    }
+    },
+
 ]
 const interHome = new IntersectionObserver(homeAction)
 interHome.observe(home)
@@ -74,7 +75,7 @@ const projectCard = listProject.map(project => {
         </div>
         <div class="buttonsProject">
             <a class="btnProject" href="${project.repostory}" target="_blank">Repositório</a>
-            <a class="btnProject" href="${project.site}" target="_blank">Acessar</a>
+           ${project.site && '<a class="btnProject" href="${project.site}" target="_blank">Acessar</a>'}
         </div>
     </div>
 </li>`)
