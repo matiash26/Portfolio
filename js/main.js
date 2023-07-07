@@ -29,7 +29,7 @@ function sectionAction(entries) {
 }
 const listProject = [
     {
-        title: "Dashboard",
+        title: "Dashboard - Free Lance",
         image: "./assets/image/dashboard.jpg",
         desc: "Projeto real para gerenciar as entradas e saidas dos produtos e ter melhoria nas vendas baseada no gráfico.",
         tag: ["React JS", "Node JS express", "MySQL"],
@@ -37,20 +37,20 @@ const listProject = [
         site: ""
     },
     {
-        title: "Desafio-interface-Dio",
-        image: "./assets/image/interface.jpg",
-        desc: "Desafio da web.dio - para recriação da plataforma, fiz no formato Reactjs e na página atualizada.",
-        tag: ["React JS"],
-        repostory: "https://github.com/matiash26/Desafio-interface-Dio/",
-        site: "https://desafio-interface-ew54f6pln-matiash26.vercel.app/"
+        title: "CineMovies",
+        image: "./assets/image/site.png",
+        desc: "Projeto de site de filmes, na qual você precisa logar e fazer uma assinatura pra ter acesso (página toda fake) apenas para treinar.",
+        tag: ["Nextjs 13", "TypeScript"],
+        repostory: "https://github.com/matiash26/cinemovies",
+        site: "https://cinemovies-matiash26.vercel.app/login"
     },
     {
-        title: "Desafio-WikiHub",
-        image: "./assets/image/wikihub.png",
-        desc: "Desafio da web.dio - para consumir API do Github, fiz o projeto todo estilo (to do list) com save no localstorage e consumir API no front.",
+        title: "Mercado não libre",
+        image: "./assets/image/mercadonaolivre.jpg",
+        desc: "repliquei a tela do mercado livre para testar meu conhecimento em Front-End",
         tag: ["React JS"],
-        repostory: "https://github.com/matiash26/Desafio-WikiHub",
-        site: "https://desafio-wiki-gdoz8d47f-matiash26.vercel.app/"
+        repostory: "https://github.com/matiash26/Mercado-nao-livre",
+        site: "https://mercado-nao-livre.vercel.app/"
     },
 
 ]
