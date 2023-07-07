@@ -50,7 +50,7 @@ const listProject = [
         desc: "repliquei a tela do mercado livre para testar meu conhecimento em Front-End",
         tag: ["React JS"],
         repostory: "https://github.com/matiash26/Mercado-nao-livre",
-        site: "https://mercado-nao-livre.vercel.app/"
+        site: "https://mercado-nao-livre.vercel.app/",
     },
 
 ]
@@ -59,7 +59,7 @@ interHome.observe(home)
 
 const interSection = new IntersectionObserver(sectionAction)
 section.forEach(el => interSection.observe(el))
-
+console.log(listProject.map(project => project.repostory))
 const projectCard = listProject.map(project => {
     return (`
     <li class="ProjectContent">
@@ -75,7 +75,7 @@ const projectCard = listProject.map(project => {
         </div>
         <div class="buttonsProject">
             <a class="btnProject" href="${project.repostory}" target="_blank">Repositório</a>
-           ${project.site && '<a class="btnProject" href="${project.site}" target="_blank">Acessar</a>'}
+           ${project.site && `<a class="btnProject" href='${project.site}' target="_blank">Acessar</a>`}
         </div>
     </div>
 </li>`)
