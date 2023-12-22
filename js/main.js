@@ -27,6 +27,14 @@ function sectionAction(entries) {
 }
 const listProject = [
   {
+    title: "Lang - Projeto Pessoal",
+    image: "./assets/image/lang.ico",
+    desc: "Projeto para evoluir e criar um ambiente divertido no seu aprendizado de idiomas, utilize filmes e séries favoritas para aprender.",
+    tag: ["TypeScript", "Electron", "Reactjs"],
+    repostory: "https://github.com/matiash26/Lang",
+    site: "https://github.com/matiash26/Lang/releases/tag/1.0.0",
+  },
+  {
     title: "Community - Free Lance",
     image: "./assets/image/community.png",
     desc: "Projeto estilo a comunidade do twitter na qual será realizado postagem e usuários com permissão poderão validar se irá publicar ou não.",
@@ -42,14 +50,6 @@ const listProject = [
     repostory:
       "https://github.com/matiash26/Projeto-de-estoque-para-gerenciar-entradas-e-saidas",
     site: "",
-  },
-  {
-    title: "Mercado não livre",
-    image: "./assets/image/mercadonaolivre.jpg",
-    desc: "repliquei a tela do mercado livre para testar meu conhecimento em Front-End",
-    tag: ["React JS"],
-    repostory: "https://github.com/matiash26/Mercado-nao-livre",
-    site: "https://mercado-nao-livre.vercel.app/",
   },
 ];
 const interHome = new IntersectionObserver(homeAction);
