@@ -30,12 +30,16 @@ header {
 }
 
 .navBlack {
-  background-color: var(--bg-main);
+  background-color: var(--bg-main) !important;
 }
 
 .navBlack > nav > h3,
 .navBlack > nav > ul > li > a {
   color: var(--tan);
+}
+
+.navBlack > div > span {
+  background-color: var(--tan) !important;
 }
 nav {
   max-width: 1450px;
@@ -62,6 +66,15 @@ nav > h3 {
   width: 100%;
   background-color: var(--bg-main);
   transition: 0.2s;
+}
+.openMenuMobile ~ .langContainer {
+  position: relative;
+  display: block;
+}
+.openMenuMobile ~ .langContainer > label {
+  background-color: var(--bg-main) !important;
+  top: 142px;
+  right: 0px;
 }
 .openMenuMobile > li {
   width: 100%;
@@ -118,6 +131,70 @@ nav > h3 {
 
 .menuList > li > a:active {
   color: var(--tan);
+}
+.langContainer label {
+  display: inline-block;
+  background-color: rgb(228, 228, 228);
+  width: 50px;
+  height: 25px;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.langContainer label::before {
+  content: "PT";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  color: var(--tan);
+  font-size: 0.8rem;
+  top: 4px;
+  left: 3px;
+  font-weight: 600;
+  background-size: cover;
+}
+.langContainer label::after {
+  content: "EN";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  color: var(--tan);
+  font-size: 0.8rem;
+  font-weight: 600;
+  top: 4px;
+  right: -3px;
+}
+.circle {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: blue;
+  border-radius: 50%;
+  position: relative;
+  right: 0;
+  transition: right 0.1s linear;
+  z-index: 2;
+
+  background: rgb(255, 194, 60);
+  background: radial-gradient(
+    circle,
+    rgba(255, 194, 60, 1) 0%,
+    rgba(3, 169, 89, 1) 100%
+  );
+}
+#lang {
+  display: none;
+}
+#lang:checked ~ label > span {
+  right: -25px;
+  transition: right 0.1s linear;
+
+  background: rgb(243, 0, 57);
+  background: radial-gradient(
+    circle,
+    rgba(243, 0, 57, 1) 0%,
+    rgba(1, 52, 150, 1) 100%
+  );
 }
 main {
   height: 100vh;
@@ -216,26 +293,33 @@ main {
   text-align: center;
   margin-bottom: 1rem;
 }
-
-.timeLapseContainer {
-  margin-top: 11rem;
+abbr {
+  color: white;
 }
-
-.timeLapseContainer > h1 {
+.habilityContainer {
+  margin-top: 11rem;
+  border-bottom: 1px solid var(--tan);
+}
+.habilityContent:nth-child(2) {
+  margin-top: 2rem;
+}
+.habilityContent > h1 {
   text-align: center;
   color: var(--tan);
   border-bottom: 1px solid var(--lightWhite);
   width: 30%;
   margin: auto;
-  margin-bottom: 3rem;
 }
 
-.timeLapseContent {
+.habilityList {
   width: 70%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--tan);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem 0;
+  list-style: none;
 }
 
 .time {
@@ -310,7 +394,7 @@ main {
 .ProjectContent {
   max-width: 360px;
   width: 100%;
-  height: 510px;
+  min-height: 510px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -462,6 +546,46 @@ main {
   left: -50px;
 }
 
+.hability {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+.habilityContent:nth-child(1) .hability:nth-child(1):hover {
+  filter: drop-shadow(0px 0px 8px #e44d26);
+}
+.hability:nth-child(2):hover {
+  filter: drop-shadow(0px 0px 8px #1572b6);
+}
+.hability:nth-child(3):hover {
+  filter: drop-shadow(0px 0px 8px #f34f29);
+}
+.hability:nth-child(4):hover {
+  filter: drop-shadow(0px 0px 8px #f0db4f);
+}
+.hability:nth-child(5):hover {
+  filter: drop-shadow(0px 0px 8px #61dafb);
+}
+.hability:nth-child(6):hover {
+  filter: drop-shadow(0px 0px 8px #00618a);
+}
+.hability:nth-child(7):hover {
+  filter: drop-shadow(0px 0px 8px #323330);
+}
+.habilityContent:nth-child(2) .hability:nth-child(1):hover {
+  filter: drop-shadow(0px 0px 8px #00618a);
+}
+.habilityContent:nth-child(2) .hability:nth-child(2):hover {
+  filter: drop-shadow(0px 0px 8px #5fa04e);
+}
+.hability:hover {
+  transform: scale(1.5);
+  transition: all 0.2s ease-in-out;
+}
+
 @media (max-width: 1112px) {
   .homeContainer {
     justify-content: center;
@@ -477,7 +601,7 @@ main {
     padding: 0 2rem;
   }
 
-  .timeLapseContainer > h1 {
+  .habilityContainer > h1 {
     width: 51%;
   }
 
@@ -498,13 +622,15 @@ main {
     padding: 0;
     height: 50px;
   }
+  .habilityContent > h1 {
+    width: 50%;
+  }
 }
 
 @media (max-width: 650px) {
-  .timeLapseContent {
+  .habilityList {
     width: 90%;
   }
-
   .title {
     width: 40%;
   }
@@ -514,19 +640,18 @@ main {
   nav > h3 {
     display: none;
   }
-
+  .langContainer {
+    display: none;
+  }
   .menuList {
     margin-left: auto;
   }
-
   .homeItem > .desc > h2 {
     font-size: 3.5rem;
   }
-
   .menuList {
     display: none;
   }
-
   .mobileMenu {
     display: block;
     margin-left: auto;
@@ -553,6 +678,7 @@ main {
     flex-wrap: wrap;
   }
 }
+
 @keyframes astronaut {
   to {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
